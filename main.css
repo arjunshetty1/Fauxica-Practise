@@ -1,0 +1,231 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin:0;
+    font-family: 'Poppins';
+    
+}
+
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto ;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    margin:4em;
+}
+nav ul{
+    list-style-type:none;
+    display: flex;   
+    gap:4.1em;
+    margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    color:red;
+
+}
+
+
+main{
+    display: flex;
+    gap: 8em;
+    margin-top: 8em;
+}
+.left-col{
+    width: 45%;
+
+}
+.right-col{
+    flex-grow: 1;
+}
+h1{
+    font-size: 5.2rem;
+    font-family:'playfair Display';
+    font-weight: normal;
+    margin: 0;
+}
+.sub-heading{
+    font-size: 1.8rem;
+}
+.cta-btns{
+    display: flex;
+    gap:2em; 
+}
+
+.sec-cta{
+    display: flex;
+    gap:2em; 
+}
+
+.primary-cta{
+    background-color:#ECECEE;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.2em;
+    padding:1em 2em;
+}
+.sec-cta{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1em 0;
+    
+
+}
+.sec-cta svg{
+    width: 20px;
+    transition: transform 0.3s;
+}
+.news{
+    display: flex;
+    font-size: 1.7rem;
+    font-weight: 200;
+    border: 1px solid black;
+    border-radius: .8em;
+    position: relative;
+    margin: 3em 0;
+    gap: 3em;
+    padding: 1.1em;
+}
+p.employees{
+    font-size: 3.3rem;
+     
+     font-weight: 200;
+
+}
+
+.right-col{
+    display:grid;
+    gap: 2.3em;
+    grid-template-columns:repeat(2,auto);
+    grid-template-areas:
+    "left right"
+    "left bottom";
+}
+
+.card{
+    border-radius: 0.8em;
+    padding:1.1em;
+    display: flex;
+    align-items: end;
+    background-size: 150%;
+    transition:background-size 800ms;
+
+}
+
+.card1{
+    grid-area: left;
+    background-image: url('../images/clothing1.jpg');
+
+}
+.card2{
+    grid-area: right;
+    background-image: url('../images/clothing2.jpg');
+}
+.card3{
+    grid-area: bottom;
+    background-image: url('../images/clothing3.jpg');
+
+}
+
+.card-details{
+   background: rgb(252, 250, 250); 
+   border-radius: 0.6em;
+   padding: 2em;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   transition: transform 800ms;
+}
+
+.card-details a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.card-details p{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+p.product-price{
+    font-size: 1.8rem;
+}
+.primary-cta:hover{
+    background: #e3e0c7;
+}
+
+.sec-cta:hover svg{
+    transform: translateX(10px);
+}
+
+.sec-cta:hover{
+    text-decoration: underline;
+}
+
+.card:hover{
+    background-size: 160%;
+
+}
+.card:hover .card-details{
+    transform: translateY(-20px);
+
+}
+
+/* into animation*/
+.overlay{
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+
+}
+
+@keyframes reveal{
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0);
+    }
+}
+
+main{
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1)forwards;
+    transform: scale(0.4);
+}
+
+@keyframes growIn{
+    to{
+        transform: scale(1);
+    }
+}
+
+main{
+    margin-top: 6em;
+}
